@@ -7,6 +7,7 @@ public class RetoVII {
         int C_Juegos = 0;
         int desicion = 1;
         int global;
+        int option;
         int bet;
        
         System.out.println("digite la cantidad global para apostar");
@@ -31,11 +32,14 @@ public class RetoVII {
             System.out.println("Jugador, escoja");
             System.out.println("1 -  Cara");
             System.out.println("2 -  Sello");
-            int option = Lectura.nextInt();  
+            option = Lectura.nextInt();  
        
-            if(option !=1 && option != 2){
+            while(option !=1 && option != 2){
                 System.out.println("El opcion seleccionada es erronea");
-                System.exit(0);
+                System.out.println("Escoja una option");
+                System.out.println("1 -  Cara");
+                System.out.println("2 -  Sello");
+                option = Lectura.nextInt();  
             }
            
             int RandomNumber = (int)(Math.random()*2+1);
