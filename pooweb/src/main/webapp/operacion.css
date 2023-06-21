@@ -1,0 +1,42 @@
+.hola{
+    height: 430px;
+    width: 90%;
+    margin: auto;
+}
+.figuras{
+    border: 1px solid black;
+    margin: 10px;
+    float: left;
+    width: 330px;
+}
+.figuras:hover{
+    transform: scale(1.1);
+    transition: 400ms;
+    border: 1px solid purple;
+}
+.figuras img{
+    margin-top: 5px;
+    width: 100%;
+    height: 300px;
+}
+
+.texto{
+    text-align: center;
+    padding: 10px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h1 {
+    text-align: center;
+    margin: 0px;
+    font-size: 150px;
+}
+p{
+    font-size: 25px;
+    text-align: center;
+}
+
+
