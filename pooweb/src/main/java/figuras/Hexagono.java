@@ -1,30 +1,41 @@
 package figuras;
-import java.util.Scanner;
+
 public class Hexagono extends Figura{
+    private double lado;
     private double perimetro;
     private double apotema;
 
     public Hexagono() {
     }
-    
-    public Hexagono(double perimetro, double apotema) {
+
+    public Hexagono(double perimetro, double apotema, double lado) {
         this.perimetro = perimetro;
         this.apotema = apotema;
+        this.lado = lado;
     }
 
-    public void setPerimetro(Double perimetro) {
+    public double getLado() {
+        return lado;
+    }
+
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
+
+    public double getPerimetro() {
+        return perimetro;
+    }
+
+    public void setPerimetro(double perimetro) {
         this.perimetro = perimetro;
     }
-    public void setApotema(Double apotema) {
-        this.apotema = apotema;
+
+    public double getApotema() {
+        return apotema;
     }
 
-    Scanner leer = new Scanner(System.in);
-    public void registrarDa(){
-        System.out.println("digite el perimetro: ");
-        perimetro = leer.nextFloat();
-        System.out.println("digite el apotema: ");
-        apotema = leer.nextFloat();
+    public void setApotema(double apotema) {
+        this.apotema = apotema;
     }
 
     public void mostrarArea(Double area){
@@ -35,4 +46,10 @@ public class Hexagono extends Figura{
         double area = (perimetro*apotema)/2;
         return area;
     }
+
+    @Override
+        public double calcularPerimetro(){
+            double perimetro = lado*6;
+            return perimetro;
+        }
 }
